@@ -48,13 +48,30 @@ The matrix is already log-scaled (2^x - 1 sums to about 1,000,000 per cell), so 
 
 ## Figures
 
-| | |
-|---|---|
-| ![QC overview](docs/figures/qc_overview.png) | Genes per cell and mitochondrial share |
-| ![UMAP](docs/figures/umap_overview.png) | UMAP colored by cluster, patient, response, timepoint, sort fraction, therapy, genes per cell and mitochondrial share. Cells from one patient are not independent, so patterns in the response panel are not evidence on their own; all tests use patient-level values |
-| ![Marker dotplot](docs/figures/dotplot__markers.png) | Marker genes by Leiden cluster |
-| ![UMAP by cell type](docs/figures/umap_celltypes.png) | UMAP colored by the working cell-type annotation |
-| ![Baseline comparisons](docs/figures/baseline_response.png) | Baseline (Pre) responders vs non-responders, one point per patient and colored by therapy: cytotoxic and memory gene scores (T cells), *TCF7* (T cells) and B-cell fraction. The p-values printed on the plots are uncorrected |
+<p align="center">
+  <img src="docs/figures/qc_overview.png" width="100%" alt="QC overview">
+</p>
+<p align="center"><em><strong>Figure 1.</strong> Quality control: genes detected per cell (left), mitochondrial share of TPM (middle), and the two plotted against each other (right).</em></p>
+
+<p align="center">
+  <img src="docs/figures/umap_overview.png" width="100%" alt="UMAP overview">
+</p>
+<p align="center"><em><strong>Figure 2.</strong> UMAP of the 15,509 cells that passed QC, colored (left to right, top to bottom) by Leiden cluster, patient, response, timepoint, sort fraction, therapy, genes per cell and mitochondrial share. Cells from one patient are not independent, so patterns in the response panel are not evidence on their own; all tests use patient-level values.</em></p>
+
+<p align="center">
+  <img src="docs/figures/dotplot__markers.png" width="100%" alt="Marker dotplot">
+</p>
+<p align="center"><em><strong>Figure 3.</strong> Marker genes by Leiden cluster. Dot size is the fraction of cells expressing the gene; color is mean expression, scaled per gene.</em></p>
+
+<p align="center">
+  <img src="docs/figures/umap_celltypes.png" width="80%" alt="UMAP by cell type">
+</p>
+<p align="center"><em><strong>Figure 4.</strong> UMAP colored by the working cell-type annotation (17 labels).</em></p>
+
+<p align="center">
+  <img src="docs/figures/baseline_response.png" width="100%" alt="Baseline comparisons">
+</p>
+<p align="center"><em><strong>Figure 5.</strong> Baseline (Pre) responders vs non-responders, one point per patient and colored by therapy: cytotoxic and memory gene scores (T cells), <em>TCF7</em> (T cells) and B-cell fraction. The p-values printed on the plots are uncorrected.</em></p>
 
 ## Results
 
