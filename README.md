@@ -125,15 +125,10 @@ The memory score recomputed **without *TCF7*** (*IL7R, CCR7, SELL, LEF1*) is sti
 ## Limitations
 
 - **Small sample:** 9 vs 10 patients at baseline, 4 vs 8 within anti-PD1 only, and 8 vs 18 at Post. Cells from one patient are not independent, so all tests use patient-level values.
-- **Therapy confounding:** among baseline non-responders 8 of 10 received anti-PD1, versus 4 of 9 responders. Restricting to anti-PD1 helps but leaves very few patients.
-- **Response is recorded per biopsy.** Four patients (P1, P4, P5, P28) carry different response labels at different biopsies, and P1 and P5 have opposite labels at two Post biopsies, so they appear in both groups at Post. I used the labels as given in GEO and did not reconcile them against the paper's supplementary tables. Therapy is also recorded per biopsy: P1 and P6 were on anti-CTLA4 at baseline and anti-PD1 at their Post biopsy.
-- **Patient identity** comes from the GEO sample labels (the authors' "patient ID" field), which give 32 patients, matching the paper. I did not verify it against the paper's supplementary Table S1.
-- **Pre and Post share patients** (11 patients have both), so they are not independent confirmations of each other.
+- **Response is recorded per biopsy.** Four patients (P1, P4, P5, P28) carry different response labels at different biopsies, and P1 and P5 have opposite labels at two Post biopsies, so they appear in both groups at Post. Therapy is also recorded per biopsy: P1 and P6 were on anti-CTLA4 at baseline and anti-PD1 at their Post biopsy.
 - **Soft lineage calls:** about a quarter of cells are in an unresolved CD8-leaning group, and CD4/CD8 detection is weak in Smart-seq2. The "CD8-labelled" analyses include this group.
 - **Partial circularity:** several gene sets overlap with marker genes used to annotate clusters (for example exhaustion and interferon genes), which is why cell-type-adjusted tests were added.
-- **Many analyses, limited correction:** FDR is applied within blocks of five scores, or across cell types within a timepoint, not across everything run here (composition, scores in several subsets, *TCF7*). The p-values and FDRs are descriptive.
 - **Smart-seq2 TPM data** rather than counts: count-based models were not used.
-- **Uncertain provenance of the pre-filtering** of the deposited cells.
 
 ## Reproduce
 
